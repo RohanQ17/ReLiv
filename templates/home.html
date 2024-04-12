@@ -12,19 +12,32 @@
     <div class="container mx-auto">
         <header>
             <nav class="flex justify-between">
+            
                 <div class="logo font-bold flex items-center text-blue">ReLiv</div>
+  
+                
+     
                 <ul class="navbar flex items-center">
                     <li>Home</li>
                     <li>About</li>
                     <li>Services</li>
                     <li>Contact Us</li>
                     <div class="user-status">
-                        <a href="{% url 'register' %}">
-                        <button class="nav-buttons sign-up" >Sign up</button>
-                        </a>
-                        <a href="{% url 'login' %}">
-                        <button class="nav-buttons log-in border-none">Log in</button>
-                        </a>
+                        {% if user.is_authenticated %}
+                        
+                            <a href="{% url 'logout' %}">
+                            <button class="nav-buttons sign-up">Log Out</button>
+                            </a> 
+                        {% else %}
+                            <a href="{% url 'register' %}">
+                            <button class="nav-buttons sign-up" >Sign up</button>
+                            </a>
+                            <a href="{% url 'login' %}">
+                            <button class="nav-buttons log-in border-none">Log in</button>
+                            </a>
+                            
+                        {% endif %}
+                    
                       </div>
                 </ul>
             </nav>
