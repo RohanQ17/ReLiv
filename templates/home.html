@@ -1,10 +1,77 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>our Landing page</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/utils.css' %}">
 </head>
-<body>
-
+<body class='overflow-x-hidden'>
+    <div class="container mx-auto">
+        <header>
+            <nav class="flex justify-between">
+                <div class="logo font-bold flex items-center text-blue">ReLiv</div>
+                <ul class="navbar flex items-center">
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Services</li>
+                    <li>Contact Us</li>
+                    <div class="user-status">
+                        <a href="{% url 'register' %}">
+                        <button class="nav-buttons sign-up" >Sign up</button>
+                        </a>
+                        <a href="{% url 'login' %}">
+                        <button class="nav-buttons log-in border-none">Log in</button>
+                        </a>
+                      </div>
+                </ul>
+            </nav>
+            <hr>
+        </header>
+        <main class="min-h-screen">
+            <section class="section1 main">
+                <div class="flex">
+                    <div class="topleft flex flex-col justify-center px-2">
+                        <div class=" text-center">
+                    </div>
+                        <h1 class="my-1 text-center"> Helping people save lives  </h1>
+                        <p class=" text-center">We are a team of members dedicated to help you guys save lives by getting helo for you in a fast and efficient way. <br> If not in need please consider opting for donation to help save a life. 
+                            </p>
+                            <!-- Display the countdown timer in an element -->
+                            <p class="deal text-center"> <span id="demo"></span></p>
+                            <div class="help">
+                                <button class="nav-buttons sign-up1">Get Help</button>
+                                <button class="nav-buttons sign-up1">Learn about Donation</button>
+                                <!-- <button class="nav-buttons log-in border-none">Learn about Donation</button> -->
+                              </div>
+                    </div>
+                    <div class="topright flex justify-center">
+                        <img alt="">
+                    </div>
+                </div>
+            </section>
+            <hr>
+        <section class="section2">
+                <div class="stats">
+                  <div class="stat">
+                    <div class="num">8</div>
+                    Another person is added to the waiting list every 8 minutes
+                  </div>
+                  <div class="stat">
+                    <div class="num">16</div>
+                    16 people die each day waiting for an organ transplant
+                  </div>
+                  <div class="stat">
+                    <div class="num">75</div>
+                    One organ,eye and tissue donor can save and heal more than 75 lives
+                  </div>
+                </div>
+      </section>
+      <hr>
+    </main>
+    </div>
+    
 </body>
 </html>
