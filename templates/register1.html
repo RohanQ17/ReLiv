@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Form</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/register.css' %}">
+</head>
+<body>
+    
+    <form action="#" method="post" class="login-form">
+        {% csrf_token %}
+        <h1 class="login-title">Register</h1>
+
+        <div class="input-box">
+            <i class='bx bxs-user'></i>
+            <input type="text" name ="username" placeholder="Username">
+        </div>
+        <div class="input-box">
+            <i class='bx bxs-user'></i>
+            <input type="text" name="email" placeholder="Email">
+         </div>
+        <div class="input-box">
+            <i class='bx bxs-lock-alt'></i>
+            <input type="password" name="password" placeholder="Password">
+        </div>
+        <div class="input-box">
+            <i class='bx bxs-lock-alt'></i>
+            <input type="password" name="password1" placeholder="Re-enter Password">
+        </div>
+
+        <div class="remember-forgot-box">
+            <label for="remember">
+                <input type="checkbox" id="remember">
+                Remember me
+            </label>
+        </div>
+
+        <button type="submit" class="login-btn">Register</button>
+    </form>
+
+</body>
+</html>
